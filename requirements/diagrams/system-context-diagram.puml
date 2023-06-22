@@ -1,0 +1,25 @@
+@startuml System context diagram of "Family archive"
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+title System context diagram of "Family archive"
+
+Person(client, "Client", "People that need to store photos and videos long-term as a backup")
+
+System(archive, "Archive management system", "Allows client to store photos and videos securely, reliably, durably.")
+
+System_Ext(aws, "Infrastructure provider system", "Provides infrastructure such as storage, computing.")
+System_Ext(ia, "Payment system", "Provides internet acquiring services. Allows clients to pay for the services.")
+System_Ext(mail, "E-mail system", "Allows communication with client via e-mail.")
+
+Rel_D(client, archive, "Uploads photos and videos for storage, views archives, billing using")
+Rel_D(client, ia, "Pays for services using")
+
+Rel_D(archive, aws, "Stores photos and videos, hosts servers, lambdas using")
+Rel_L(archive, ia, "Create invoices using")
+Rel_R(archive, mail, "Sends mail using")
+
+Rel_U(mail, client, "Sends mail to")
+
+SHOW_LEGEND()
+
+@enduml
