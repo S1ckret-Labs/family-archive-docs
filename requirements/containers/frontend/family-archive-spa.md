@@ -40,7 +40,7 @@ When `Upload button is pressed`, the `SPA` shall `open a system file picker`.
 
 When `a user uploads files via system file picker`, the `SPA` shall `open an Uploads section` and `save user's upload requests` and `upload files to S3`.
 
-> TODO: API reference
+> API Reference: [Uploads - POST](../backend/family-archive-web-server.md#uploads---post)
 
 ---
 
@@ -105,8 +105,7 @@ While `Uploads section is opened`, the `SPA` shall `fetch user's upload requests
 
 When `Uploads section is opened`, the `SPA` shall `fetch user's upload requests`.
 
-> TODO: API reference
-
+> API Reference: [Uploads - GET](../backend/family-archive-web-server.md#uploads---get)
 ---
 
 Where `a user has upload requests with status "pending upload"`, the `SPA` shall `notify the user that these file names wasn't uploaded` and `suggest him to reupload these files again`. (Reupload suggestion).
@@ -115,8 +114,7 @@ Where `a user has upload requests with status "pending upload"`, the `SPA` shall
 
 When `a user declines a reupload suggestion`, the `SPA` shall `delete proposed upload requests`.
 
->> TODO: API reference
-
+> API Reference: [Uploads - DELETE](../backend/family-archive-web-server.md#uploads---delete)
 ---
 
 When `a user accepts a reupload suggestion`, the `SPA` shall `open a system file picker`.
@@ -125,8 +123,7 @@ When `a user accepts a reupload suggestion`, the `SPA` shall `open a system file
 
 When `a user uploads files via system file picker for reupload request`, the `SPA` shall `update user's upload requests` and `upload files to S3`
 
->> TODO: API reference
-
+> API Reference: [Uploads - PUT](../backend/family-archive-web-server.md#uploads---put)
 ---
 
 
