@@ -10,9 +10,11 @@
 
 > E.g. if a user's connection has been interrupted and some files wasn't uploaded to an S3 bucket. On a page refresh the user will see a warning that some files wasn't uploaded and will be prompted to reupload them.
 
-## U_ARCHIVE
+## [Archive user story](../../user-stories.md#archive)
 
-### Uploads
+### [Uploads feature](../../features-breakdown.md#uploads)
+
+#### Upload button
 
 The `SPA` shall `have a button for uploading files`.
 
@@ -84,29 +86,21 @@ When `button for archiving files is pressed`, the `SPA` shall `trigger an archiv
 
 > TODO: API reference
 
-### Archives
-
-The `SPA` shall `have an Archives section`.
-
----
-
-The `Archives section` shall `show user's archives by year and month`.
-
-> TODO: API reference
-
-
-## U_FEEDBACK
+#### Fetch upload request status
 
 While `Uploads section is opened`, the `SPA` shall `fetch user's upload requests statuses every 1 minute`.
 
 >> TODO: API reference
 
-### Reupload suggestion
+---
 
 When `Uploads section is opened`, the `SPA` shall `fetch user's upload requests`.
 
 > API Reference: [Uploads - GET](../backend/family-archive-web-server.md#uploads---get)
+
 ---
+
+#### Reupload suggestion
 
 Where `a user has upload requests with status "pending upload"`, the `SPA` shall `notify the user that these file names wasn't uploaded` and `suggest him to reupload these files again`. (Reupload suggestion).
 
@@ -124,8 +118,15 @@ When `a user accepts a reupload suggestion`, the `SPA` shall `open a system file
 When `a user uploads files via system file picker for reupload request`, the `SPA` shall `update user's upload requests` and `upload files to S3`
 
 > API Reference: [Uploads - PUT](../backend/family-archive-web-server.md#uploads---put)
+
+### [Archiving feature](../../features-breakdown.md#archiving)
+
+#### Archives section
+
+The `SPA` shall `have an Archives section`.
+
 ---
 
+The `Archives section` shall `show user's archives by year and month`.
 
-
-
+> TODO: API reference

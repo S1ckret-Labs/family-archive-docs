@@ -4,15 +4,15 @@
 
 - `File tree` - User's hierarchy of objects. Every user has a root object. There can be 3 types of objects: directories, archives, files.
 
-## U_ARCHIVE
+## [Archive user story](../../user-stories.md#archive)
 
-### Uploads
+### [Uploads feature](../../features-breakdown.md#uploads)
 
 #### Uploads - URL
 
 `<host>/api/v1/users/{userId}/upload/requests`
 
-#### Uploads - GET
+#### Get upload requests
 
 The `web server` shall `provide API to get all user's upload requests`.
 
@@ -35,7 +35,7 @@ Returns user's upload requests. Response example:
 
 ---
 
-#### Uploads - POST
+#### Create upload requests
 
 The `web server` shall `provide API to create user's upload requests`.
 
@@ -66,7 +66,7 @@ Response example:
 
 ---
 
-#### Uploads - PUT
+#### Regenerate URLs for media reupload
 
 The `web server` shall `provide API to regenerate S3 signed URLs for user's upload requests with "pending upload" status`.
 
@@ -92,7 +92,7 @@ Response example:
 ---
 
 
-#### Uploads - DELETE
+#### Delete upload requests
 
 The `web server` shall `provide API to delete user's upload requests`.
 
