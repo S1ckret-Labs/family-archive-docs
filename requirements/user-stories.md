@@ -9,16 +9,48 @@ This document describes main high-level user stories.
 - Client
 - Support
 
-## As a Client I want to
+## As a Client I want to...
 
-- `U_ARCHIVE`: archive my photos and videos reliably, durably, cost-effective, securely as originals for long-term, because I want to have a 100% reliable backup.
-- `U_UX`: have an easy and comprehensive UX, because I want to upload photos without tutorials and with minimal steps required.
-- `U_FEEDBACK`: be notified about the state of the system, because I want to understand that my photos and videos are 100% uploaded.
-- `U_PAY_AS_YOU_GO`: have pay-as-you-go pricing, because I don't want to pay for unused storage.
-- `U_PAY_AS_YOU_GO_FEEDBACK`: be communicated transparently about pricing, because I want to know how&why I am charged exactly that amount of money.
-- `U_AUTOMATIC_SORTING`: my photos and videos automatically sorted in folders, because it's hard and time consuming to sort by hand.
-- `U_ORIGINAL_STRUCTURE`: keep my existing folder structure, because I want to migrate without losing any structure.
-- `U_SYNC`: set a folder on my PC to automatically sync with cloud, because I want to be sure that every photo is backed up in cloud.
-- `U_SHARING`: share my account with other family members, because I want all family photos to be in one place and so other family members could have access to photos.
-- `U_RECOVERY`: have a solid account recovery process, because I want to restore my account even if I lost my email & password.
-- `U_321`: have a software that can perform 3-2-1 backup automatically. (e.g. local drive, hard drive, cloud).
+### Archive
+
+...archive my photos and videos reliably, durably, cost-effective, securely as originals for long-term, because I want to have a 100% reliable backup.
+
+### UX
+
+...have UX with minimal steps to complete archival, because I want to upload photos without tutorials and with minimal steps required.
+
+### Feedback
+
+...be notified about the state of the system, because I want to understand that my photos and videos are 100% uploaded.
+
+### Pay as you go
+
+...have pay-as-you-go pricing, because I don't want to pay for unused storage.
+
+### Pricing transparency
+
+...be communicated transparently about pricing, because I want to know how&why I am charged exactly that amount of money.
+
+### Auto sort
+...my photos and videos automatically sorted in folders, because it's hard and time consuming to sort by hand.
+
+### 3-2-1
+
+...have a software that can perform 3-2-1 backup automatically. (e.g. local drive, hard drive, cloud).
+
+### Sync from a device
+
+...set a folder on my PC to automatically sync with cloud, because I want to be sure that every photo is backed up in cloud.
+
+### Original folder structure
+
+...keep my existing folder structure, because I want to migrate without losing any structure.
+
+### Share
+
+...share my account with other family members, because I want all family photos to be in one place and so other family members could have access to photos.
+
+### Recover
+
+...have a solid account recovery process, because I want to restore my account even if I lost my email & password.
+
