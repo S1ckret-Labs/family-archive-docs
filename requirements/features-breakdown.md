@@ -1,5 +1,13 @@
 # Features breakdown
 
+## About
+
+This page describes main features, links requirements to them and show feature progress.
+
+- ✅ - Done
+- 🚧 - Work in progress
+- 🥚 - To be implemented
+
 ## Common language
 
 `Media file` - photo or video file.
@@ -11,10 +19,19 @@
 `Uploads` feature allows user to
 
 - see uploaded media file name, preview, size, presence of metadata
+  - 🚧 [SPA: Fetch upload request status](./containers/frontend/family-archive-spa.md#fetch-upload-request-status)
+  - 🚧 [SPA: Uploads section](./containers/frontend/family-archive-spa.md#uploads-section)
+  - ✅ [Web server: Get upload requests](./containers/backend/family-archive-web-server.md#get-upload-requests)
 - upload media files
+  - 🚧 [SPA: Upload button](./containers/frontend/family-archive-spa.md#upload-button)
+  - 🥚 [SPA: Drag&Drop](./containers/frontend/family-archive-spa.md#dragdrop)
+  - ✅ [Web server: Create upload requests](./containers/backend/family-archive-web-server.md#create-upload-requests)
 - reupload media files which was corrupted or wasn't uploaded properly
+  - 🥚 [SPA: Reupload suggestion](./containers/frontend/family-archive-spa.md#reupload-suggestion)
+  - 🥚 [Web server: Regenerate URLs for media upload](./containers/backend/family-archive-web-server.md#regenerate-urls-for-media-reupload)
 - cancel media file upload
 - delete uploaded media file, which wasn't archived yet
+  - 🥚 [Web server: Delete upload requests](./containers/backend/family-archive-web-server.md#delete-upload-requests)
 - reschedule archiving time
 
 ### File status confirmation
@@ -22,6 +39,8 @@
 `File status confirmation` feature allows user to
 
 - see if media file was uploaded correctly
+  - 🚧 [SPA: Fetch upload request status](./containers/frontend/family-archive-spa.md#fetch-upload-request-status)
+
 
 ### Archiving
 
