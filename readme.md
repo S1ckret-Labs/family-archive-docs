@@ -16,3 +16,5 @@
   - [Conventions (GitHub, commits, etc..)](./operations/project-management.md)
   - [Roadmap & Scope](./operations/roadmap-scope.md)
 - [History of decisions](./history-of-decisions/readme.md)
+- Work notes
+  - [Database design](./work-notes/database/readme.md)
