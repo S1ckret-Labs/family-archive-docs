@@ -21,6 +21,7 @@ Backend part contains of the next containers:
 
 - **Web server** - [family-archive-web-server](containers/backend/family-archive-web-server.md)
 - **Archival job** - [family-archive-archival-job](containers/backend/family-archive-archival-job.md)
+- **Upload confirmation job** - [family-archive-upload-confirmation-job](containers/backend/family-archive-upload-confirmation-job.md)
 
 ![container-diagram](diagrams/container-diagram.png)
 
