@@ -7,7 +7,7 @@
     - Backend
       - [Web server](./requirements/containers/backend/family-archive-web-server.md)
       - [Archival job](./requirements/containers/backend/family-archive-archival-job.md)
-      - [File upload confirmation job](./requirements/containers/backend/family-archive-file-upload-confirmation-job.md)
+      - [Upload confirmation job](./requirements/containers/backend/family-archive-upload-confirmation-job.md)
     - Frontend
       - [Landing](./requirements/containers/frontend/family-archive-landing.md)
       - [Application](./requirements/containers/frontend/family-archive-spa.md)
