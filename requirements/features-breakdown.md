@@ -40,6 +40,7 @@ This page describes main features, links requirements to them and show feature p
 
 - see if media file was uploaded correctly
   - 🚧 [SPA: Fetch upload request status](./containers/frontend/family-archive-spa.md#fetch-upload-request-status)
+  - 🚧 [Upload confirmation job: Handle `object created` events](./containers/backend/family-archive-upload-confirmation-job.md#handle-object-created-events)
 
 
 ### Archiving
