@@ -16,7 +16,14 @@
 
 The `web server` shall `provide API to get all user's upload requests`.
 
-Returns user's upload requests. Response example:
+Returns user's upload requests. 
+
+Request example:
+```http
+GET localhost:8080/api/v1/users/1/upload/requests
+```
+
+Response example:
 
 ```json
 [
@@ -41,9 +48,10 @@ The `web server` shall `provide API to create user's upload requests`.
 
 Inserts upload requests into a DB, returns S3 signed URLs to upload files. 
 
-Body example:
+Request example:
+```http
+POST localhost:8080/api/v1/users/1/upload/requests
 
-```json
 ["img.png","video.mp4"]
 ```
 
@@ -72,9 +80,11 @@ The `web server` shall `provide API to regenerate S3 signed URLs for user's uplo
 
 Regenerate S3 signed URL for upload requests. Skips files if upload status is not `pending upload` or if id is not found.
 
-Body example:
 
-```json
+Request example:
+```http
+PUT localhost:8080/api/v1/users/1/upload/requests
+
 [1, 69420]
 ```
 
@@ -98,9 +108,10 @@ The `web server` shall `provide API to delete user's upload requests`.
 
 Deletes user's upload requests by id list. Also deletes S3 file if present. Skips if some id is not found. Returns ids which are deleted.
 
-Body example:
+Request example:
+```http
+DELETE localhost:8080/api/v1/users/1/upload/requests
 
-```json
 [1, 2, 69420]
 ```
 
