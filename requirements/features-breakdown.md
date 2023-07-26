@@ -43,13 +43,17 @@ This page describes main features, links requirements to them and show feature p
   - 🚧 [Upload confirmation job: Handle `object created` events](./containers/backend/family-archive-upload-confirmation-job.md#handle-object-created-events)
 
 
-### Archiving
+### Navigation
 
-`Archiving` feature allows user to
-
+`Navigation` feature allows user to
 - see automatically create folder structure by year, month, day
 - see automatically created archives
 - see media file names, previews, size, metadata inside archive
+
+
+### Archives
+
+`Archives` feature allows user to
 - restore archives
 - see restoration status of an archive
 - download archives
