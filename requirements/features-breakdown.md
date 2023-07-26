@@ -2,11 +2,21 @@
 
 ## About
 
+> Documentation updated on: `2023.07.26`
+
 This page describes main features, links requirements to them and show feature progress.
 
 - ✅ - Done
 - 🚧 - Work in progress
 - 🥚 - To be implemented
+
+## Status
+
+|              | Total | 🥚 | 🚧 | ✅ |
+|--------------|-------|----|----|----|
+| Requirements | 18    | 11 | 4  | 3  |
+| Sub features | 14    | 11 | 3  | 0  |
+| Features     | 4     | 2  | 2  | 0  |
 
 ## Common language
 
