@@ -131,6 +131,65 @@ The `SPA` shall `have an Archives section`.
 
 ---
 
-The `Archives section` shall `show user's archives by year and month`.
+The `Archives section` shall `show user's hierarchical object tree as such: year->month->day->archives->media files`.
 
-> TODO: API reference
+> API Reference: [Archives - GET](../backend/family-archive-web-server.md#get-object-tree-flat)
+
+---
+
+The `objects with type "dir", "zip"` shall `be expandable`.
+
+---
+
+The `Archives section` shall `have an option to disable year, month, day folder levels`.
+
+When `day level is disabled`, `the structure of the Archives section` shall be `year->month->archives->media files`.
+When `month level is disabled`, `the structure of the Archives section` shall be `year->archives->media files`.
+When `year level is disabled`, `the structure of the Archives section` shall be `archives->media files`.
+
+---
+
+The `Archives section` shall `allow to select an object with type "dir", "zip" to be restored`.
+
+---
+
+The `Archives section` shall `have a "Restore" button to restore archives`.
+
+---
+
+When `objects with type "dir", "zip" are selected` and `a "Restore" button is pressed`, the `SPA` shall `open a confirmation popup ("Restoration confirmation")`.
+
+When `a user accepts "Restoration confirmation"`, the `SPA` shall `request to restore the selected archives`.
+
+> API Reference: **TODO**
+
+#### Restored archives section
+
+The `SPA` shall `have a "Restored archives" section`.
+
+---
+
+When `"Restored archives" section is opened`, the `SPA` shall `fetch archives being restored (restoration requests)`.
+
+> API Reference: **TODO**
+
+---
+
+The `"Restored archives" section` shall `show archives being restored, their name, size, restoration status, request date, estimated restoration date, estimated expiration date`.
+
+> API Reference: **TODO**
+
+---
+
+The `"Restored archives" section` shall `have a "Download" button for downloading restored archives`.
+
+---
+
+The `"Restored archives" section` shall `allow to select archives for download`.
+
+---
+
+When `archives ready for download are selected` and `a "Download" button is pressed`, the `SPA` shall `get download links` and `initiate the download`.
+
+> API Reference: **TODO**
+
