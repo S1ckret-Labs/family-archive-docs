@@ -56,14 +56,16 @@ This page describes main features, links requirements to them and show feature p
 ### Navigation
 
 `Navigation` feature allows user to
-- see automatically create folder structure by year, month, day
-- see automatically created archives
-- see media file names, previews, size, metadata inside archive
+- switch between different sections such as `Uploads`, `Archives`, `Restored archives`
 
 
 ### Archives
 
 `Archives` feature allows user to
+- automatically create archives from uploaded media files
+- see folder structure by year, month, day
+- see archives
+- see media file names, previews, size, metadata inside archive
 - restore archives
 - see restoration status of an archive
 - download archives

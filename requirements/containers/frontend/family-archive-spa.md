@@ -119,7 +119,11 @@ When `a user uploads files via system file picker for reupload request`, the `SP
 
 > API Reference: [Uploads - PUT](../backend/family-archive-web-server.md#uploads---put)
 
-### [Archiving feature](../../features-breakdown.md#archiving)
+### [Navigation feature](../../features-breakdown.md#navigation)
+
+The `SPA` shall `have a navigation panel which show links to all other sections`.
+
+### [Archives feature](../../features-breakdown.md#archives)
 
 #### Archives section
 
