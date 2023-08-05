@@ -1,9 +1,5 @@
 # Web server requirements
 
-## Common language
-
-- `File tree` - User's hierarchy of objects. Every user has a root object. There can be 3 types of objects: directories, archives, files.
-
 ## [Archive user story](../../user-stories.md#archive)
 
 ### [Uploads feature](../../features-breakdown.md#uploads)
