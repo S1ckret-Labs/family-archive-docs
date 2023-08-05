@@ -34,9 +34,7 @@ When `Upload button is pressed`, the `SPA` shall `open a system file picker`.
 
 When `a user uploads files via system file picker`, the `SPA` shall `open an Uploads section` and `save user's upload requests` and `upload files to S3`.
 
-> API Reference: [Uploads - POST](../backend/family-archive-web-server.md#uploads---post)
-
----
+> API reference: [Create upload requests](../backend/api-ref-web-server.md#create-upload-requests)
 
 
 #### Drag&Drop
@@ -82,13 +80,13 @@ When `button for archiving files is pressed`, the `SPA` shall `trigger an archiv
 
 While `Uploads section is opened`, the `SPA` shall `fetch user's upload requests statuses every 1 minute`.
 
->> TODO: API reference
+> API reference: [Get upload requests](../backend/api-ref-web-server.md#get-upload-requests)
 
 ---
 
 When `Uploads section is opened`, the `SPA` shall `fetch user's upload requests`.
 
-> API Reference: [Uploads - GET](../backend/family-archive-web-server.md#uploads---get)
+> API reference: [Get upload requests](../backend/api-ref-web-server.md#get-upload-requests)
 
 ---
 
@@ -100,7 +98,8 @@ Where `a user has upload requests with status "pending upload"`, the `SPA` shall
 
 When `a user declines a reupload suggestion`, the `SPA` shall `delete proposed upload requests`.
 
-> API Reference: [Uploads - DELETE](../backend/family-archive-web-server.md#uploads---delete)
+> API reference: [Delete upload requests](../backend/api-ref-web-server.md#delete-upload-requests) 
+
 ---
 
 When `a user accepts a reupload suggestion`, the `SPA` shall `open a system file picker`.
@@ -109,7 +108,7 @@ When `a user accepts a reupload suggestion`, the `SPA` shall `open a system file
 
 When `a user uploads files via system file picker for reupload request`, the `SPA` shall `update user's upload requests` and `upload files to S3`
 
-> API Reference: [Uploads - PUT](../backend/family-archive-web-server.md#uploads---put)
+> API reference: [Regenerate URLs for media reupload](../backend/api-ref-web-server.md#regenerate-urls-for-media-reupload) 
 
 ### [Navigation feature](../../features-breakdown.md#navigation)
 
@@ -125,7 +124,7 @@ The `SPA` shall `have an Archives section`.
 
 The `Archives section` shall `show user's hierarchical object tree as such: year->month->day->archives->media files`.
 
-> API Reference: [Archives - GET](../backend/family-archive-web-server.md#get-object-tree-flat)
+> API reference: [Get object tree (flat)](../backend/api-ref-web-server.md#get-object-tree-flat) 
 
 ---
 
