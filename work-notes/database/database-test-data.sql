@@ -16,14 +16,14 @@ VALUES
 	(1, 1500000, 9, 2, 0),
 	(2, 2300000, 11, 2, 0);
 
-INSERT INTO `UploadRequests` (`user_id`, `status_id`, `object_key`)
+INSERT INTO `UploadRequests` (`user_id`, `status_id`, `object_key`, `size_bytes`, `taken_at_sec`)
 VALUES 
-	(1, 1, "IMG_20230601_101201.jpg"),
-	(1, 1, "IMG_20230602_102202.jpg"),
-	(1, 1, "IMG_20230603_103203.jpg"),
-	(1, 1, "IMG_20230604_104204.jpg"),
-	(2, 1, "IMG_20230605_105205.jpg"),
-	(2, 1, "IMG_20230606_106206.jpg");
+	(1, 1, "IMG_20230601_101201.jpg", 223516, NULL),
+	(1, 1, "IMG_20230602_102202.jpg", 5134, NULL),
+	(1, 1, "IMG_20230603_103203.jpg", 156412, NULL),
+	(1, 1, "IMG_20230604_104204.jpg", 71348, NULL),
+	(2, 1, "IMG_20230605_105205.jpg", 521613, NULL),
+	(2, 1, "IMG_20230606_106206.jpg", 1991068, NULL);
 
 INSERT INTO `UploadRequestStatuses` (`status_id`, `status_name`)
 VALUES 
