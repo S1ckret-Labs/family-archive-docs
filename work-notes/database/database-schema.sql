@@ -33,6 +33,8 @@ CREATE TABLE `UploadRequests` (
   `user_id` BIGINT UNSIGNED NOT NULL,
   `status_id` BIGINT UNSIGNED NOT NULL,
   `object_key` VARCHAR(255) NOT NULL -- File name including directory. e.g. "cats/orange.png"
+  `size_bytes` BIGINT UNSIGNED NOT NULL,
+  `taken_at_sec` BIGINT UNSIGNED NULL,
 );
 
 -- Enum table for file statuses "Pending upload", "Uploaded", "Pending archvation"
