@@ -43,6 +43,23 @@ CREATE TABLE `UploadRequestStatuses` (
   `status_name` VARCHAR(255) NOT NULL
 );
 
+-- Stores user's archives to restore
+CREATE TABLE `RestoreRequests` (
+  `request_id` BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `user_id` BIGINT NOT NULL,
+  `status_id` BIGINT NOT NULL,
+  `archive_id` BIGINT NOT NULL,
+  `requested_at_sec` BIGINT NOT NULL,
+  `available_till_sec` BIGINT NOT NULL,
+  `available_for_days` INT NOT NULL
+);
+
+-- Enum table for archive restore statuses "In progress", "Restored", "Expired"
+CREATE TABLE `RestoreRequestStatuses` (
+  `status_id` BIGINT PRIMARY KEY NOT NULL,
+  `status_name` VARCHAR NOT NULL
+);
+
 -- Base table, stores common attributes for files, directories and archives.
 CREATE TABLE `Objects` (
   `object_id` BIGINT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -78,6 +95,12 @@ CREATE TABLE `Archives` (
 ALTER TABLE `Users` ADD FOREIGN KEY (`root_object_id`) REFERENCES `Objects` (`object_id`);
 
 ALTER TABLE `UserMetrics` ADD FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`);
+
+ALTER TABLE `RestoreRequests` ADD FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`);
+
+ALTER TABLE `RestoreRequests` ADD FOREIGN KEY (`status_id`) REFERENCES `RestoreRequestStatuses` (`status_id`);
+
+ALTER TABLE `RestoreRequests` ADD FOREIGN KEY (`archive_id`) REFERENCES `Archives` (`object_id`);
 
 ALTER TABLE `UploadRequests` ADD FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`);
 
