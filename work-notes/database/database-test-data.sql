@@ -31,6 +31,11 @@ VALUES
 	(2, "Uploaded"),
 	(3, "Pending archival");
 
+INSERT INTO `RestoreRequestStatuses` (`status_id`, `status_name`)
+VALUES 
+	(1, "In progress"),
+	(2, "Restored"),
+	(3, "Expired");
   
 -- Files
 INSERT INTO `Objects` (`object_key`, `size_bytes`)
