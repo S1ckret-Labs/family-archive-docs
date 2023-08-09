@@ -32,9 +32,9 @@ CREATE TABLE `UploadRequests` (
   `request_id` BIGINT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `user_id` BIGINT UNSIGNED NOT NULL,
   `status_id` BIGINT UNSIGNED NOT NULL,
-  `object_key` VARCHAR(255) NOT NULL -- File name including directory. e.g. "cats/orange.png"
+  `object_key` VARCHAR(255) NOT NULL, -- File name including directory. e.g. "cats/orange.png"
   `size_bytes` BIGINT UNSIGNED NOT NULL,
-  `taken_at_sec` BIGINT UNSIGNED NULL,
+  `taken_at_sec` BIGINT UNSIGNED NULL
 );
 
 -- Enum table for file statuses "Pending upload", "Uploaded", "Pending archvation"
@@ -57,7 +57,7 @@ CREATE TABLE `RestoreRequests` (
 -- Enum table for archive restore statuses "In progress", "Restored", "Expired"
 CREATE TABLE `RestoreRequestStatuses` (
   `status_id` BIGINT PRIMARY KEY NOT NULL,
-  `status_name` VARCHAR NOT NULL
+  `status_name` VARCHAR(255) NOT NULL
 );
 
 -- Base table, stores common attributes for files, directories and archives.
