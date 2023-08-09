@@ -24,15 +24,21 @@ Response example:
   {
     "ObjectId": 1,
     "ObjectKey": "IMG_20230601_101201.jpg",
-    "StatusName": "Pending upload"
+    "StatusName": "Pending upload",
+    "SizeBytes": 416613125,
+    "TakenAtSec": 1691566015
   },
   {
     "ObjectId": 2,
     "ObjectKey": "IMG_20230602_102202.jpg",
-    "StatusName": "Pending upload"
+    "StatusName": "Pending upload",
+    "SizeBytes": 662316534,
+    "TakenAtSec": null
   }
 ]
 ```
+
+`TakenAtSec` field could be null, because not every media file has metadata about when the file was created.
 
 ---
 
@@ -46,8 +52,22 @@ Request example:
 ```http
 POST localhost:8080/api/v1/users/1/upload/requests
 
-["img.png","video.mp4"]
+[
+  {
+    "ObjectKey": "db.go.jpg",
+    "SizeBytes": 155412,
+    "TakenAtSec": null
+  },
+  {
+    "ObjectKey": "nice-cat.png",
+    "SizeBytes": 155412,
+    "TakenAtSec": 1691566015
+  }
+]
 ```
+
+`SizeBytes` field is mandatory and MUST NOT be null.
+`TakenAtSec` field MAY be null, because not every media file has metadata about when the file was created.
 
 Response example:
 
@@ -74,12 +94,27 @@ Response example:
 
 Regenerates S3 signed URL for upload requests. Skips files if upload status is not `pending upload` or if id is not found.
 
+Overrides `ObjectKey`, `SizeBytes`, `TakenAtSec` fields.
+
 
 Request example:
 ```http
 PUT localhost:8080/api/v1/users/1/upload/requests
 
-[1, 69420]
+[
+  {
+    "ObjectId": 1
+    "ObjectKey": "db.go.jpg",
+    "SizeBytes": 155412,
+    "TakenAtSec": null
+  },
+  {
+    "ObjectId": 69420
+    "ObjectKey": "nice-cat.png",
+    "SizeBytes": 155412,
+    "TakenAtSec": 1691566015
+  }
+]
 ```
 
 Response example:
