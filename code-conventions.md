@@ -1,4 +1,4 @@
-# Project management using GitHub projects
+# Code Conventions
 
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
 > NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and
@@ -89,3 +89,11 @@ A PR body MUST have the next line `Closes #PR-NUMBER` for automatic issue linkag
 > e.g. `Closes #53`
 
 A PR MUST be linked to a project.
+
+## Code formatting rules
+
+A repository MUST have a formatting style defined in a file.
+
+A repository MUST have a GitHub action which will run code linter based on a style defined in the file.
+
+A repository MUST have a readme which describes how to setup linter and formatter locally using a style defined in the file.
