@@ -130,14 +130,9 @@ This section describes key stakeholders of the system and their needs.
 
 ## Architecture
 
+System context diagram and container diagram are on [IcePanel](https://s.icepanel.io/OGrKzrsbVlp4Us/WnfO).
 
-### System context diagram
-
-![system-context-diagram](diagrams/system-context-diagram.png)
-
-### Container diagram
-
-The system contains of [backend](containers/backend/readme.md) and [frontend](containers/frontend/readme.md) parts.
+The system contains of backend and frontend parts.
 
 Frontend part contains of the next containers:
 
@@ -150,7 +145,6 @@ Backend part contains of the next containers:
 - **Archival job** - [family-archive-archival-job](https://github.com/S1ckret-Labs/family-archive-archival-job)
 - **Upload confirmation job** - [family-archive-upload-confirmation-job](https://github.com/S1ckret-Labs/family-archive-upload-confirmation-job)
 
-![container-diagram](diagrams/container-diagram.png)
 
 ### Process views
 
