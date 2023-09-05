@@ -148,3 +148,30 @@ Backend part contains of the next containers:
 
 ### Process views
 
+Not every use case is depicted in sequence diagrams, because I haven't thought about them yet.
+
+#### UC-1: Registration
+
+![account-registration flow](./imgs/uc-1_account-registration-flow.png)
+
+![temporary-account-registration flow](./imgs/uc-1_temporary-account-flow.png)
+
+#### UC-2: Media files uploading
+
+![media-file-uploading](./imgs/uc-2_media-files-uploading.png)
+
+#### UC-3: Media files archival
+
+![media-file-archival](./imgs/uc-3_media-file-archival.png)
+  
+#### UC-4: Media file navigation
+
+![media-file-navigation](./imgs/uc-4_media-file-navigation.png)
+
+#### UC-5: Archives restoration
+
+![archives-restoration](./imgs/uc-5_archives-restoration.png)
+  
+#### UC-6 Archives download
+
+![archives-download](./imgs/uc-6_archives-download.png)

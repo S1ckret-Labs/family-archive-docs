@@ -1,0 +1,27 @@
+@startuml
+!include ./C4-PlantUML/C4_Sequence.puml
+
+title Sequence diagram of "Media files uploading" (Happy path)
+
+
+Person(user, "User")
+Container(spa, "SPA", "Svelte")
+Container(server, "Web server", "Go")
+ContainerDb(s3, "Media files bucket", "Amazon S3")
+ContainerDb(db, "Database", "MySQL")
+Container(quartz, "Job scheduler", "Amazon EventBridge")
+Container(ucj, "Upload confirmation job", "Go/Lambda")
+
+Rel(user, spa, "Clicks 'Upload' button")
+Rel(user, spa, "Uploads media files to browser")
+Rel(spa, server, "Requests for upload request", "JSON/HTTPS")
+Rel(server, s3, "Generates S3 pre-signed URLs", "JSON/HTTPS")
+Rel(server, db, "Saves the upload requests", "SQL")
+Rel(server, quartz, "Schedules the archival job in 2 hours", "JSON/HTTPS")
+Rel(server, spa, "Returns S3 pre-signed URLs", "JSON/HTTPS")
+Rel(spa, s3, "Uploads media files using S3 pre-signed URLs", "JSON/HTTPS")
+Rel(s3, ucj, "Triggers on each file upload")
+Rel(ucj, db, "Updates upload request status to 'Upload confirmed'")
+
+SHOW_LEGEND()
+@enduml

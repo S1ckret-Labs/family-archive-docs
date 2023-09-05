@@ -1,0 +1,16 @@
+@startuml
+!include ./C4-PlantUML/C4_Sequence.puml
+
+title Sequence diagram of "Media files navigation" (Happy path)
+
+Person(user, "User")
+Container(spa, "SPA", "Svelte")
+Container(server, "Web server", "Go")
+ContainerDb(db, "Database", "MySQL")
+
+Rel(user, spa, "Clicks 'My Archives' button")
+Rel(spa, server, "Requests for file tree", "JSON/HTTPS")
+Rel(server, db, "Fetches the file tree", "SQL")
+
+SHOW_LEGEND()
+@enduml

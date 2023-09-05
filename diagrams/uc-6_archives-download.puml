@@ -1,0 +1,20 @@
+@startuml
+!include ./C4-PlantUML/C4_Sequence.puml
+
+title Sequence diagram of "Archives download" (Happy path)
+
+Person(user, "User")
+Container(spa, "SPA", "Svelte")
+Container(server, "Web server", "Go")
+ContainerDb(db, "Database", "MySQL")
+ContainerDb(s3a, "Restored archives bucket", "Amazon S3")
+
+Rel(user, spa, "Clicks 'Download' button")
+Rel(spa, server, "Requests for archives download", "JSON/HTTPS")
+Rel(server, s3a, "Creates S3 pre-signed URLs", "JSON/HTTPS")
+Rel(server, db, "Saves download request", "SQL")
+Rel(server, spa, "Returns S3 pre-signed URLs", "JSON/HTTPS")
+Rel(spa, s3a, "Downloads archives using S3 pre-signed URLs", "JSON/HTTPS")
+
+SHOW_LEGEND()
+@enduml
