@@ -1,0 +1,3 @@
+[submodule "puml-c4"]
+	path = diagrams/C4-PlantUML
+	url = https://github.com/plantuml-stdlib/C4-PlantUML.git
