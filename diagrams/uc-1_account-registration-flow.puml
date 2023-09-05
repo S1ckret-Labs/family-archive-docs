@@ -1,0 +1,17 @@
+@startuml
+!include ./C4-PlantUML/C4_Sequence.puml
+
+title Sequence diagram of "Account registration" (Happy path)
+
+Person(user, "User")
+Container(spa, "SPA", "Svelte")
+Container(server, "Web server", "Go")
+ContainerDb(db, "Database", "MySQL")
+
+Rel(user, spa, "Clicks on 'Register' button")
+Rel(user, spa, "Fills in all necessary information")
+Rel(spa, server, "Requests to create an account", "JSON/HTTPS")
+Rel(server, db, "Saves the account", "SQL")
+
+SHOW_LEGEND()
+@enduml

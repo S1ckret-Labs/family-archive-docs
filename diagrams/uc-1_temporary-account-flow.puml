@@ -1,0 +1,22 @@
+@startuml
+!include ./C4-PlantUML/C4_Sequence.puml
+
+title Sequence diagram of "Temporary account registration" (Happy path)
+
+Person(user, "User")
+Container(landing, "Landing", "HTML/CSS/JS")
+Container(spa, "SPA", "Svelte")
+Container(server, "Web server", "Go")
+ContainerDb(db, "Database", "MySQL")
+
+Rel(user, landing, "Clicks 'Try now' button")
+Rel(landing, spa, "Redirects to")
+Rel(spa, server, "Requests to create a temporary account", "JSON/HTTPS")
+Rel(server, server, "Generates unique account identifier")
+Rel(server, db, "Saves the account", "SQL")
+Rel(server, spa, "Returns unique identifier")
+Rel(spa, spa, "Saves unique identifier as cookie")
+
+
+SHOW_LEGEND()
+@enduml

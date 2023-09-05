@@ -1,0 +1,19 @@
+@startuml
+!include ./C4-PlantUML/C4_Sequence.puml
+
+title Sequence diagram of "Archives restoration" (Happy path)
+
+Person(user, "User")
+Container(spa, "SPA", "Svelte")
+Container(server, "Web server", "Go")
+ContainerDb(db, "Database", "MySQL")
+ContainerDb(s3a, "Archives bucket", "Amazon S3")
+
+Rel(user, spa, "Clicks 'Restore' button")
+Rel(spa, server, "Requests for archives restoration", "JSON/HTTPS")
+Rel(server, server, "Estimates restoration time")
+Rel(server, db, "Saves restoration request", "SQL")
+Rel(server, s3a, "Calls 'RestoreObject'", "JSON/HTTPS")
+
+SHOW_LEGEND()
+@enduml

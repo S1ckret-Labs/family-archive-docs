@@ -1,0 +1,24 @@
+@startuml
+!include ./C4-PlantUML/C4_Sequence.puml
+
+title Sequence diagram of "Media files archival" (Happy path)
+
+Container(quartz, "Job scheduler", "Amazon EventBridge")
+Container(aj, "Archival job", "Go/Fargate")
+ContainerDb(db, "Database", "MySQL")
+ContainerDb(s3, "Media files bucket", "Amazon S3")
+ContainerDb(s3a, "Archives bucket", "Amazon S3")
+
+Rel(quartz, aj, "Triggers", "JSON/HTTPS")
+Rel(aj, db, "Fetches upload requests", "SQL")
+Rel(db, aj, "Returns metadata about uploaded files", "SQL")
+Rel(aj, s3, "Downloads media files", "JSON/HTTPS")
+Rel(aj, aj, "Groups files by year,month,day")
+Rel(aj, aj, "Creates archives")
+Rel(aj, db, "Saves file tree")
+Rel(aj, db, "Updates upload request status to 'Archived'")
+Rel(aj, s3a, "Uploads archives")
+Rel(aj, s3, "Deletes media files")
+
+SHOW_LEGEND()
+@enduml
